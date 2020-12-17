@@ -15,7 +15,7 @@ public class User implements UserDetails {
     private Long id;
 
     @Column(name = "username")
-    private String name;
+    private String username;
 
     @Column(name = "lastname")
     private String lastname;
@@ -44,12 +44,10 @@ public class User implements UserDetails {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
-    }
 
-    public void setName(String name) {
-        this.name = name;
+
+    public void setUsername(String name) {
+        this.username = name;
     }
 
     public String getLastname() {
@@ -92,7 +90,7 @@ public class User implements UserDetails {
 
     @Override
     public String getUsername() {
-        return name;
+        return username;
     }
 
     @Override

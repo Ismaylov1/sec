@@ -23,11 +23,6 @@ public class UserController {
 		return "hello";
 	}
 
-    @GetMapping("/login")
-    public String loginPage() {
-        return "";
-    }
-
     @GetMapping(value = "/admin")
 	public String adminPage(){
 		return "admin";

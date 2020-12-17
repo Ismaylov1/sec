@@ -2,6 +2,7 @@ package web.dao;
 
 
 import org.springframework.stereotype.Repository;
+import web.model.Role;
 import web.model.User;
 
 import javax.persistence.EntityManager;
@@ -20,8 +21,10 @@ public class UserDaoImpl implements UserDao {
 
     @Override
     public User getUserByName(String name) {
-        String nameSQL = String.format("SELECT * FROM userdb.users where name='%s'", name);
-        return (User) entityManager.createQuery(nameSQL);
+        return entityManager
+                .createQuery("select u from User u where u.username =?1", User.class)
+                .setParameter(1, name)
+                .getSingleResult();
     }
 
     @Override
@@ -42,9 +45,31 @@ public class UserDaoImpl implements UserDao {
     }
 
     @Override
+    public User getUserById(long id) {
+        return entityManager
+                .createQuery("select u from User u where u.id =?1", User.class)
+                .setParameter(1, id)
+                .getSingleResult();
+    }
+
+    @Override
     @SuppressWarnings("unchecked")
     public List<User> listUsers() {
         Query query = entityManager.createQuery("from users");
+        return query.getResultList();
+    }
+
+    @Override
+    public Role getRoleByName(String name) {
+        return entityManager
+                .createQuery("select u from Role u where u.name =?1", Role.class)
+                .setParameter(1, name)
+                .getSingleResult();
+    }
+
+    @Override
+    public List<Role> listRoles() {
+        Query query = entityManager.createQuery("from Role");
         return query.getResultList();
     }
 }
