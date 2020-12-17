@@ -17,10 +17,10 @@ public class AdminController {
     public String allUsers(Model model) {
         model.addAttribute("allUsers", userService.listUsers());
         List<User> users = userService.listUsers();
-        for (User user : users
-        ) {
-            System.out.println(user);
-        }
+//        for (User user : users
+//        ) {
+//            System.out.println(user);
+//        }
         return "admin";
     }
 

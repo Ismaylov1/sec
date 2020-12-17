@@ -55,7 +55,7 @@ public class UserDaoImpl implements UserDao {
     @Override
     @SuppressWarnings("unchecked")
     public List<User> listUsers() {
-        Query query = entityManager.createQuery("from users");
+        Query query = entityManager.createQuery("from Users");
         return query.getResultList();
     }
 
@@ -68,6 +68,7 @@ public class UserDaoImpl implements UserDao {
     }
 
     @Override
+    @SuppressWarnings("unchecked")
     public List<Role> listRoles() {
         Query query = entityManager.createQuery("from Role");
         return query.getResultList();
