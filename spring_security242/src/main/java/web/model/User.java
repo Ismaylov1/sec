@@ -44,7 +44,6 @@ public class User implements UserDetails {
     }
 
 
-
     public void setUsername(String name) {
         this.username = name;
     }

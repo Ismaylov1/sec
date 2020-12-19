@@ -74,7 +74,7 @@ public class AdminController {
         return "user";
     }
 
-    private Set<Role> addNewRole(String [] role){
+    private Set<Role> addNewRole(String[] role) {
         Set<Role> roleSet = new HashSet<>();
         for (int i = 0; i < role.length; i++) {
             roleSet.add(userService.getRoleByName(role[i]));

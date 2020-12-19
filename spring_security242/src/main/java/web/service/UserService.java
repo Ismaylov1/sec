@@ -15,7 +15,10 @@ public interface UserService {
     void remove(long id);
 
     User getUserById(long id);
+
     List<User> listUsers();
+
     public Role getRoleByName(String name);
+
     public List<Role> listRoles();
 }
