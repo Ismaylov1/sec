@@ -4,7 +4,6 @@ import org.springframework.security.core.GrantedAuthority;
 
 import javax.persistence.*;
 import java.util.Objects;
-import java.util.Set;
 
 @Entity
 @Table(name = "roles")
@@ -15,11 +14,9 @@ public class Role implements GrantedAuthority {
     @Column(name = "name")
     private String name;
 
-//    @JoinTable(name = "user_roles", joinColumns = @JoinColumn(name = "user_id"),
-//            inverseJoinColumns = @JoinColumn(name = "role_id"))
-
-    @ManyToMany(mappedBy = "roles")
-    private Set<User> users;
+//
+//    @ManyToMany(mappedBy = "roles")
+//    private Set<User> users;
 
 
     public Role(Long id, String name) {
@@ -36,13 +33,13 @@ public class Role implements GrantedAuthority {
         this.name = name;
     }
 
-    public Set<User> getUsers() {
-        return users;
-    }
+//    public Set<User> getUsers() {
+//        return users;
+//    }
 
-    public void setUsers(Set<User> users) {
-        this.users = users;
-    }
+//    public void setUsers(Set<User> users) {
+//        this.users = users;
+//    }
 
     public Role() {
 
@@ -56,18 +53,19 @@ public class Role implements GrantedAuthority {
         this.id = id;
     }
 
-    @Override
-    public String toString() {
-        return "Role{" +
-                "id=" + id +
-                ", role='" + name + '\'' +
-                ", users=" + users +
-                '}';
-    }
+
 
     @Override
     public String getAuthority() {
         return name;
+    }
+
+    @Override
+    public String toString() {
+        return "Role{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                '}';
     }
 
     @Override
@@ -76,12 +74,12 @@ public class Role implements GrantedAuthority {
         if (o == null || getClass() != o.getClass()) return false;
         Role role = (Role) o;
         return Objects.equals(id, role.id) &&
-                Objects.equals(name, role.name) &&
-                Objects.equals(users, role.users);
+                Objects.equals(name, role.name);
+
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, name, users);
+        return Objects.hash(id, name);
     }
 }

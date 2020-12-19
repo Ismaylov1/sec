@@ -11,11 +11,21 @@
         <table>
             <tr>
                 <td>First Name</td>
-                <td><input type="text" name="name"/></td>
+                <td><input type="text" name="username"/></td>
             </tr>
             <tr>
                 <td> SurName</td>
-                <td><input type="text" name="surname"/></td>
+                <td><input type="text" name="lastname"/></td>
+            </tr>
+            <tr>
+                <td>Roles</td>
+                <td>
+                    <th:block th:each="roles : ${listRole}">
+                        <br>
+                        <input type="checkbox" name="newRole" th:value="${roles.getName()}" th:checked="${roles.getName() == 'ROLE_USER'}"/>
+                        <label th:text="${roles.getName()}"></label>
+                    </th:block>
+                </td>
             </tr>
         </table>
         <br/>

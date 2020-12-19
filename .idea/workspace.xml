@@ -4,7 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ffb1d785-299b-45ea-be90-691d1518855d" name="Default Changelist" comment="" />
+    <list default="true" id="ffb1d785-299b-45ea-be90-691d1518855d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/spring_security242/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spring_security242/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring_security242/out/artifacts/spring_security_Web_exploded/WEB-INF/classes/web/controller/AdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/spring_security242/out/artifacts/spring_security_Web_exploded/WEB-INF/classes/web/controller/AdminController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring_security242/out/artifacts/spring_security_Web_exploded/WEB-INF/pages/user.html" beforeDir="false" afterPath="$PROJECT_DIR$/spring_security242/out/artifacts/spring_security_Web_exploded/WEB-INF/pages/user.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring_security242/out/artifacts/spring_security_Web_exploded/WEB-INF/web.xml/user.html" beforeDir="false" afterPath="$PROJECT_DIR$/spring_security242/out/artifacts/spring_security_Web_exploded/WEB-INF/web.xml/user.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring_security242/src/main/java/web/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring_security242/src/main/java/web/controller/AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring_security242/src/main/webapp/WEB-INF/pages/user.html" beforeDir="false" afterPath="$PROJECT_DIR$/spring_security242/src/main/webapp/WEB-INF/pages/user.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring_security242/target/Spring_Security/WEB-INF/classes/web/controller/AdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/spring_security242/target/Spring_Security/WEB-INF/classes/web/controller/AdminController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring_security242/target/Spring_Security/WEB-INF/pages/user.html" beforeDir="false" afterPath="$PROJECT_DIR$/spring_security242/target/Spring_Security/WEB-INF/pages/user.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring_security242/target/Spring_Security/WEB-INF/web.xml/user.html" beforeDir="false" afterPath="$PROJECT_DIR$/spring_security242/target/Spring_Security/WEB-INF/web.xml/user.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring_security242/target/classes/web/controller/AdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/spring_security242/target/classes/web/controller/AdminController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring_security242/target/spring_security.war" beforeDir="false" afterPath="$PROJECT_DIR$/spring_security242/target/spring_security.war" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -29,7 +41,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/spring_security242" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.25342464" />
@@ -43,6 +55,7 @@
       <option name="presentableId" value="Default" />
       <updated>1608197763457</updated>
       <workItem from="1608197764558" duration="219000" />
+      <workItem from="1608390245894" duration="9000" />
     </task>
     <servers />
   </component>

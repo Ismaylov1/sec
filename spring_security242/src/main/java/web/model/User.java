@@ -23,8 +23,6 @@ public class User implements UserDetails {
     @Column(name = "password")
     private String password;
 
-    @Transient
-    transient private String confirmPassword;
 
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(name = "user_roles", joinColumns = @JoinColumn(name = "user_id"),
@@ -58,13 +56,6 @@ public class User implements UserDetails {
         this.lastname = lastname;
     }
 
-    public String getConfirmPassword() {
-        return confirmPassword;
-    }
-
-    public void setConfirmPassword(String confirmPassword) {
-        this.confirmPassword = confirmPassword;
-    }
 
     public Set<Role> getRoles() {
         return roles;

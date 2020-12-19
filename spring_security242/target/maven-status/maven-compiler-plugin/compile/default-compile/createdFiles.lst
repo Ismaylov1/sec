@@ -1,0 +1,16 @@
+web\service\UserService.class
+web\config\SpringSecurityInitializer.class
+web\config\AppInit.class
+web\config\SecurityConfig.class
+web\config\WebConfig.class
+web\service\UserServiceImpl.class
+web\model\Role.class
+web\controller\AdminController.class
+web\service\SecurityService.class
+web\service\UserDetailsServiceImpl.class
+web\config\handler\LoginSuccessHandler.class
+web\dao\UserDao.class
+web\config\RootConfig.class
+web\dao\UserDaoImpl.class
+web\service\SecurityServiceImpl.class
+web\model\User.class

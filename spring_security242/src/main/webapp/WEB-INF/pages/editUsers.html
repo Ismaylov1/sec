@@ -12,11 +12,21 @@
         <table>
             <tr>
                 <td>Name</td>
-                <td><input type="text" name="name" th:field="*{name}"/></td>
+                <td><input type="text" name="name" th:field="*{username}"/></td>
                 <td>SurName</td>
-                <td><input type="text" name="surname" th:field="*{surname}"/></td>
+                <td><input type="text" name="surname" th:field="*{lastname}"/></td>
             </tr>
-
+            <tr>
+                <td>Roles</td>
+                <td>
+                    <th:block th:each="role : ${listRole}">
+                        <br>
+                        <input th:checked="${#lists.contains(editUser.roles, role)}" name="newRole"
+                               th:value="${role.getName()}" type="checkbox"/>
+                        <label th:text="${role.getName()}"></label>
+                    </th:block>
+                </td>
+            </tr>
         </table>
         <br>
         <input type="submit" value="Submit"/>

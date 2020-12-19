@@ -1,9 +1,11 @@
 package web.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import web.dao.UserDao;
+import web.model.Role;
 import web.model.User;
 
 import java.util.List;
@@ -12,7 +14,6 @@ import java.util.List;
 public class UserServiceImpl implements UserService {
 
     private final UserDao userDao;
-
     @Autowired
     public UserServiceImpl(UserDao userDao) {
         this.userDao = userDao;
@@ -28,6 +29,7 @@ public class UserServiceImpl implements UserService {
     @Override
     @Transactional
     public void add(User user) {
+        user.setPassword(NoOpPasswordEncoder.getInstance().encode(user.getPassword()));
         userDao.add(user);
     }
 
@@ -44,8 +46,9 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    @Transactional
     public User getUserById(long id) {
-      return userDao.getUserById(id);
+        return userDao.getUserById(id);
     }
 
     @Override
@@ -53,4 +56,31 @@ public class UserServiceImpl implements UserService {
     public List<User> listUsers() {
         return userDao.listUsers();
     }
+
+    @Override
+    @Transactional
+    public Role getRoleByName(String name) {
+        return userDao.getRoleByName(name);
+    }
+
+    @Override
+    public List<Role> listRoles() {
+        return userDao.listRoles();
+    }
+
+//    @Override
+//    @Transactional(readOnly = true)
+//    public UserDetails loadUserByUsername(String s) throws UsernameNotFoundException {
+//        User user = userDao.getUserByName(s);
+//        Set<GrantedAuthority> grantedAuthorities = new HashSet<>();
+//        for (Role role :
+//                user.getRoles()) {
+//            grantedAuthorities.add(new SimpleGrantedAuthority(role.getName()));
+//
+//        }
+//        return new org.springframework.security.core.userdetails.User(user.getUsername(),
+//                user.getPassword(), grantedAuthorities);
+//
+//    }
 }
+
