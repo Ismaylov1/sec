@@ -1,7 +1,6 @@
 package web.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import web.dao.UserDao;
@@ -20,6 +19,7 @@ public class UserServiceImpl implements UserService {
     }
 
 
+
     @Override
     @Transactional
     public User getUserByName(String name) {
@@ -29,7 +29,7 @@ public class UserServiceImpl implements UserService {
     @Override
     @Transactional
     public void add(User user) {
-        user.setPassword(NoOpPasswordEncoder.getInstance().encode(user.getPassword()));
+//        user.setPassword(NoOpPasswordEncoder.getInstance().encode(user.getPassword()));
         userDao.add(user);
     }
 
@@ -41,8 +41,8 @@ public class UserServiceImpl implements UserService {
 
     @Override
     @Transactional
-    public void remove(User user) {
-        userDao.remove(user);
+    public void remove(long id) {
+        userDao.remove(id);
     }
 
     @Override

@@ -11,13 +11,15 @@ public interface UserDao {
 
     void updateUsers(User user);
 
-    void remove(User user);
+    void remove(long id);
 
     User getUserById(long id);
 
     List<User> listUsers();
-    public Role getRoleByName(String name);
-    public List<Role> listRoles();
+
+    Role getRoleByName(String name);
+
+    List<Role> listRoles();
 
 
 }
