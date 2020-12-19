@@ -55,7 +55,7 @@ public class UserDaoImpl implements UserDao {
     @Override
     @SuppressWarnings("unchecked")
     public List<User> listUsers() {
-        Query query = entityManager.createQuery("from Users");
+        Query query = entityManager.createQuery("from User");
         return query.getResultList();
     }
 
