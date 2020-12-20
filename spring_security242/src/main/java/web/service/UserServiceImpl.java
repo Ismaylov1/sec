@@ -68,19 +68,5 @@ public class UserServiceImpl implements UserService {
         return userDao.listRoles();
     }
 
-//    @Override
-//    @Transactional(readOnly = true)
-//    public UserDetails loadUserByUsername(String s) throws UsernameNotFoundException {
-//        User user = userDao.getUserByName(s);
-//        Set<GrantedAuthority> grantedAuthorities = new HashSet<>();
-//        for (Role role :
-//                user.getRoles()) {
-//            grantedAuthorities.add(new SimpleGrantedAuthority(role.getName()));
-//
-//        }
-//        return new org.springframework.security.core.userdetails.User(user.getUsername(),
-//                user.getPassword(), grantedAuthorities);
-//
-//    }
 }
 
