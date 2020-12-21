@@ -42,7 +42,7 @@ public class UserServiceImpl implements UserService {
     @Override
     @Transactional
     public void remove(long id) {
-        userDao.remove(id);
+        userDao.remove(userDao.getUserById(id));
     }
 
     @Override
